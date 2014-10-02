@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="13A584" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+    </dependencies>
+    <scenes>
+        <!--Initial View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="InitialViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="OVL-Wi-N9i"/>
+                        <viewControllerLayoutGuide type="bottom" id="akI-eq-tXl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--Menu View Controller-->
+        <scene sceneID="hAC-zh-mvo">
+            <objects>
+                <viewController storyboardIdentifier="MenuView" id="ObT-rj-CoB" customClass="MenuViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="X35-zg-TgO"/>
+                        <viewControllerLayoutGuide type="bottom" id="AUU-qb-3Qd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="EDb-va-CMM">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="jaM-Hd-ki9">
+                                <rect key="frame" x="0.0" y="20" width="255" height="1004"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="255" id="DWt-h6-n6g"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TableViewCellReuseID" id="iId-8W-R9H">
+                                        <rect key="frame" x="0.0" y="22" width="255" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iId-8W-R9H">
+                                            <rect key="frame" x="0.0" y="0.0" width="255" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="ObT-rj-CoB" id="GsG-Ld-vol"/>
+                                    <outlet property="delegate" destination="ObT-rj-CoB" id="sMt-D3-gaT"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jaM-Hd-ki9" firstAttribute="top" secondItem="EDb-va-CMM" secondAttribute="top" constant="20" id="LxH-k4-daZ"/>
+                            <constraint firstAttribute="bottom" secondItem="jaM-Hd-ki9" secondAttribute="bottom" id="X2i-ck-vpy"/>
+                            <constraint firstItem="jaM-Hd-ki9" firstAttribute="leading" secondItem="EDb-va-CMM" secondAttribute="leading" id="uMU-S5-n2F"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="jaM-Hd-ki9" id="1Ds-gQ-LmF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T1y-Xr-h6p" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="981" y="-118"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="MnL-NB-rPO">
+            <objects>
+                <viewController storyboardIdentifier="DetailView" id="qMa-7z-gUH" customClass="DetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="S7B-Qg-M22"/>
+                        <viewControllerLayoutGuide type="bottom" id="24a-GD-f32"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="km1-as-Um2">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nZK-S9-K9U">
+                                <rect key="frame" x="0.0" y="64" width="768" height="960"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="qMa-7z-gUH" id="E0T-BF-rQP"/>
+                                </connections>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="nZK-S9-K9U" firstAttribute="top" secondItem="km1-as-Um2" secondAttribute="top" constant="64" id="Vdc-lt-4qo"/>
+                            <constraint firstAttribute="bottom" secondItem="nZK-S9-K9U" secondAttribute="bottom" id="aqx-kG-tUC"/>
+                            <constraint firstItem="nZK-S9-K9U" firstAttribute="leading" secondItem="km1-as-Um2" secondAttribute="leading" id="rSg-XP-uBK"/>
+                            <constraint firstAttribute="trailing" secondItem="nZK-S9-K9U" secondAttribute="trailing" id="z3c-Z3-Gfb"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="W3b-YI-iZr"/>
+                    <connections>
+                        <outlet property="webView" destination="nZK-S9-K9U" id="Zyh-Ve-ZEr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gak-dS-Aiw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2933" y="-118"/>
+        </scene>
+        <!--Top Navigation Controller-->
+        <scene sceneID="KDI-86-WXp">
+            <objects>
+                <navigationController storyboardIdentifier="TopView" automaticallyAdjustsScrollViewInsets="NO" id="Zba-WH-DeZ" customClass="TopNavigationController" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nU1-vB-lX7">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="qMa-7z-gUH" kind="relationship" relationship="rootViewController" id="cLB-vW-iV2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y0y-Zw-tNA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1959" y="-118"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackOpaque"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>
