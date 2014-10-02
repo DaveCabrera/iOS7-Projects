@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A598" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Vpo-TS-jWU">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3746"/>
+    </dependencies>
+    <scenes>
+        <!--City View Controller - My Favorite Cities-->
+        <scene sceneID="01q-1c-3mj">
+            <objects>
+                <tableViewController id="arz-ci-cpS" customClass="CityViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="odJ-Uj-YBi">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="detailButton" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CityTableView" id="H3j-k9-1BA">
+                                <rect key="frame" x="0.0" y="119" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="H3j-k9-1BA" id="i85-jH-Q5g">
+                                    <rect key="frame" x="0.0" y="0.0" width="273" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="My Favorite Cities" id="q9J-Pn-0So"/>
+                    <connections>
+                        <outlet property="countryCityTableView" destination="odJ-Uj-YBi" id="nTx-xS-ZUl"/>
+                        <segue destination="j4q-ST-13K" kind="push" identifier="AddCity" id="8ot-Hy-rTy"/>
+                        <segue destination="QMH-bw-N4S" kind="push" identifier="CityMap" id="P8B-ZN-jan"/>
+                        <segue destination="L9Q-aw-Ng6" kind="push" identifier="CityWeb" id="RyF-07-tLY"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kl7-3a-aWT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="535" y="104"/>
+        </scene>
+        <!--City Web View Controller-->
+        <scene sceneID="YNI-LO-5hK">
+            <objects>
+                <viewController id="L9Q-aw-Ng6" customClass="CityWebViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="B3E-Wg-aEI"/>
+                        <viewControllerLayoutGuide type="bottom" id="4rr-Dj-pSH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Fm6-FY-y3H">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aIe-kd-sRK">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="L9Q-aw-Ng6" id="Pdl-Qn-CWb"/>
+                                </connections>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="aIe-kd-sRK" secondAttribute="bottom" id="ELu-iH-WhB"/>
+                            <constraint firstAttribute="trailing" secondItem="aIe-kd-sRK" secondAttribute="trailing" id="Nfa-HP-I2m"/>
+                            <constraint firstItem="aIe-kd-sRK" firstAttribute="top" secondItem="Fm6-FY-y3H" secondAttribute="top" id="PqJ-4w-ShM"/>
+                            <constraint firstItem="aIe-kd-sRK" firstAttribute="leading" secondItem="Fm6-FY-y3H" secondAttribute="leading" id="RfL-0U-A8F"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Fi8-dc-pnC"/>
+                    <connections>
+                        <outlet property="webView" destination="aIe-kd-sRK" id="9hU-qa-L4d"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2ej-iM-Bjz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1298" y="104"/>
+        </scene>
+        <!--City Map View Controller-->
+        <scene sceneID="IhI-y9-VBe">
+            <objects>
+                <viewController id="QMH-bw-N4S" customClass="CityMapViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NOR-qG-xWH"/>
+                        <viewControllerLayoutGuide type="bottom" id="IrH-BG-S56"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RvL-LY-p4n">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="mDi-dr-mOA">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="QMH-bw-N4S" id="yUi-jf-VVN"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mDi-dr-mOA" firstAttribute="leading" secondItem="RvL-LY-p4n" secondAttribute="leading" id="7w7-6w-8Hl"/>
+                            <constraint firstItem="mDi-dr-mOA" firstAttribute="top" secondItem="RvL-LY-p4n" secondAttribute="top" id="ds5-Cf-Vea"/>
+                            <constraint firstAttribute="bottom" secondItem="mDi-dr-mOA" secondAttribute="bottom" id="gZv-M6-PfW"/>
+                            <constraint firstAttribute="trailing" secondItem="mDi-dr-mOA" secondAttribute="trailing" id="uXO-EY-v37"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="XeD-R0-pzV"/>
+                    <connections>
+                        <outlet property="mapView" destination="mDi-dr-mOA" id="TUY-2M-fHo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7gX-MS-wSJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="902" y="489"/>
+        </scene>
+        <!--Add City View Controller - Add City-->
+        <scene sceneID="fwA-mJ-qAf">
+            <objects>
+                <viewController id="j4q-ST-13K" customClass="AddCityViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="QZd-fK-bdu"/>
+                        <viewControllerLayoutGuide type="bottom" id="jB7-IY-2bH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="b3M-06-Src">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Country Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="szO-KW-oEg">
+                                <rect key="frame" x="103" y="94" width="115" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Country Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ln2-mh-QMO">
+                                <rect key="frame" x="20" y="123" width="280" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <action selector="keyboardDone:" destination="j4q-ST-13K" eventType="editingDidEndOnExit" id="f1e-DV-M4E"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="City Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fs5-Wf-sMp">
+                                <rect key="frame" x="119" y="196" width="83" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Your Favorite City Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nUv-1N-KSe">
+                                <rect key="frame" x="20" y="225" width="280" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <action selector="keyboardDone:" destination="j4q-ST-13K" eventType="editingDidEndOnExit" id="vNn-Ga-03e"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add City" id="LWa-lR-gin"/>
+                    <connections>
+                        <outlet property="cityName" destination="nUv-1N-KSe" id="v1g-s1-koT"/>
+                        <outlet property="countryName" destination="ln2-mh-QMO" id="Ynr-Yi-xyf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RGz-GI-bzu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="902" y="-227"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="shE-Zn-0OV">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="Vpo-TS-jWU" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="GlD-hm-4MN">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="arz-ci-cpS" kind="relationship" relationship="rootViewController" id="gTQ-Bt-Yq7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5kp-AY-whr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1" y="104"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

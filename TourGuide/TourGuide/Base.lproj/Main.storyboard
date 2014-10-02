@@ -1,0 +1,485 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="13A584" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="8YX-ce-x5E">
+    <dependencies>
+        <deployment defaultVersion="1536" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Vex-rW-GRa">
+            <objects>
+                <tabBarController id="8YX-ce-x5E" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="JQR-rB-NYL">
+                        <rect key="frame" x="0.0" y="431" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="7ge-sE-AVn" kind="relationship" relationship="viewControllers" id="VAN-Yr-9Zr"/>
+                        <segue destination="i91-Dq-jcJ" kind="relationship" relationship="viewControllers" id="YJg-T3-dM7"/>
+                        <segue destination="HIv-TR-UZx" kind="relationship" relationship="viewControllers" id="9qb-PB-UM2"/>
+                        <segue destination="e9F-0Y-a2K" kind="relationship" relationship="viewControllers" id="4u8-bM-N24"/>
+                        <segue destination="9O3-Vy-qjP" kind="relationship" relationship="viewControllers" id="wcl-M2-YrG"/>
+                        <segue destination="A1N-DX-sdd" kind="relationship" relationship="viewControllers" id="Oz3-8c-pMK"/>
+                        <segue destination="Zad-Fv-sQS" kind="relationship" relationship="viewControllers" id="KsE-yH-btL"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FNP-y4-bzi" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-829" y="100"/>
+        </scene>
+        <!--View Controller - Cancun-->
+        <scene sceneID="hkP-Va-yjG">
+            <objects>
+                <viewController id="7ge-sE-AVn" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="714-8j-6Sv"/>
+                        <viewControllerLayoutGuide type="bottom" id="Y2Z-cF-dcx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JZ4-sQ-DhA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cancun" translatesAutoresizingMaskIntoConstraints="NO" id="Mlv-5a-WLN">
+                                <rect key="frame" x="0.0" y="20" width="320" height="499"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Cancun" image="tabBarCancun" id="IdY-Eq-t6A"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6DP-WP-lTl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-290" y="-1832"/>
+        </scene>
+        <!--London View Controller - London-->
+        <scene sceneID="9vB-0t-eO5">
+            <objects>
+                <viewController title="London" id="SSQ-MK-wsM" customClass="LondonViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GYZ-rj-xrn"/>
+                        <viewControllerLayoutGuide type="bottom" id="tcC-y4-5Tr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="f0x-br-h01">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rDw-Ez-MeY">
+                                <rect key="frame" x="0.0" y="64" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem width="8" style="plain" systemItem="fixedSpace" id="i4L-GF-6pV"/>
+                                    <barButtonItem title="Boat Cruise" id="qIJ-at-vmf">
+                                        <connections>
+                                            <segue destination="6yd-Do-PNG" kind="push" id="Yu4-gn-Xhc"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Monuments" id="GcK-SP-ucz">
+                                        <connections>
+                                            <segue destination="avi-Pd-bwE" kind="push" id="rCm-XL-dqL"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Museums" id="h8D-ES-BAV">
+                                        <connections>
+                                            <segue destination="eS7-Ga-5qg" kind="push" id="hms-wZ-OTK"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please Take Our Survey!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tr1-1f-Pbx">
+                                <rect key="frame" x="20" y="152" width="280" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nDu-FM-Dbw">
+                                <rect key="frame" x="137" y="192" width="48" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Survey">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="surveyButtonTapped:" destination="SSQ-MK-wsM" eventType="touchUpInside" id="uLd-oz-mc6"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="London" id="5g1-WI-Y2U"/>
+                    <connections>
+                        <outlet property="messageBox" destination="tr1-1f-Pbx" id="eaj-2I-cMG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZRI-Y9-RlO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="258" y="-1056"/>
+        </scene>
+        <!--View Controller - Museums-->
+        <scene sceneID="zfW-SG-RUI">
+            <objects>
+                <viewController id="eS7-Ga-5qg" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ffJ-2b-o6M"/>
+                        <viewControllerLayoutGuide type="bottom" id="GrJ-bI-JnP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Bsg-ZE-rmk">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="londonMuseums" translatesAutoresizingMaskIntoConstraints="NO" id="9NN-ze-Eue">
+                                <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Museums" id="WYm-eM-iIC"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x2B-iI-XlD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1194" y="-1056"/>
+        </scene>
+        <!--View Controller - Monuments-->
+        <scene sceneID="fB7-Fj-YND">
+            <objects>
+                <viewController id="avi-Pd-bwE" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yoQ-VD-Kyn"/>
+                        <viewControllerLayoutGuide type="bottom" id="mrZ-AD-1wv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Pbc-5q-fKQ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="londonMonuments" translatesAutoresizingMaskIntoConstraints="NO" id="qBs-cX-SBY">
+                                <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Monuments" id="sQg-Gs-ws9"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UJw-T8-wBK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="796" y="-695"/>
+        </scene>
+        <!--View Controller - Boat Cruise-->
+        <scene sceneID="vMA-Js-Lnk">
+            <objects>
+                <viewController id="6yd-Do-PNG" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HnV-qx-uKq"/>
+                        <viewControllerLayoutGuide type="bottom" id="wI3-ZO-Y9P"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dng-lI-e4O">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="londonBoatCruise" translatesAutoresizingMaskIntoConstraints="NO" id="1sE-v6-XKq">
+                                <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Boat Cruise" id="Pon-Xo-Uix"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zc3-xE-2JC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="796" y="-1507"/>
+        </scene>
+        <!--Navigation Controller - London-->
+        <scene sceneID="u2v-oB-7tv">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="i91-Dq-jcJ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="London" image="tabBarLondon" id="qGm-uv-qlg"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="crP-6S-n1v">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="SSQ-MK-wsM" kind="relationship" relationship="rootViewController" id="l0E-Aq-05K"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0bM-kg-Gue" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-290" y="-1056"/>
+        </scene>
+        <!--View Controller - Miami-->
+        <scene sceneID="v8M-Ma-sq1">
+            <objects>
+                <viewController id="HIv-TR-UZx" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ufK-YH-wh6"/>
+                        <viewControllerLayoutGuide type="bottom" id="9pu-Bc-Z21"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jwZ-Z4-TJI">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="miami" translatesAutoresizingMaskIntoConstraints="NO" id="PyL-gy-XGS">
+                                <rect key="frame" x="0.0" y="20" width="320" height="499"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Miami" image="tabBarMiami" id="icJ-dJ-Ads"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4EE-82-fhV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-290" y="-267"/>
+        </scene>
+        <!--View Controller - Munich-->
+        <scene sceneID="hsD-vb-mv9">
+            <objects>
+                <viewController id="nEl-7y-e79" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9gd-hZ-boL"/>
+                        <viewControllerLayoutGuide type="bottom" id="3QL-KW-dfx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VI0-D2-bJ8">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kNP-v8-T0L">
+                                <rect key="frame" x="127" y="150" width="66" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Churches">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="geW-nR-1rs" kind="push" id="SEW-zB-mhs"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ryq-0x-6Bq">
+                                <rect key="frame" x="120" y="225" width="80" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Marienplatz">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="47l-aN-oOp" kind="push" id="fzy-IZ-ifP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xVo-zD-5Rw">
+                                <rect key="frame" x="120" y="298" width="81" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Oktoberfest">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="vBa-VX-hGv" kind="push" id="lDc-WD-ACx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Munich" id="T2v-sS-MtB"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="707-gb-hyu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="258" y="481"/>
+        </scene>
+        <!--View Controller - Marienplatz-->
+        <scene sceneID="eiH-nd-Iid">
+            <objects>
+                <viewController id="47l-aN-oOp" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lw6-Gq-iTq"/>
+                        <viewControllerLayoutGuide type="bottom" id="tK7-FH-nY3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PbG-iI-jWW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="munichMarienplatz" translatesAutoresizingMaskIntoConstraints="NO" id="wKM-wt-kJO">
+                                <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Marienplatz" id="kYc-Hv-jB7"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MXP-mj-gTP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="789" y="981"/>
+        </scene>
+        <!--View Controller - Oktoberfest-->
+        <scene sceneID="a8Z-cp-Z7K">
+            <objects>
+                <viewController id="vBa-VX-hGv" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2cb-05-b5E"/>
+                        <viewControllerLayoutGuide type="bottom" id="SfW-BZ-lIC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wrm-P2-lX4">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="munichOktoberfest" translatesAutoresizingMaskIntoConstraints="NO" id="xWc-wd-w0K">
+                                <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Oktoberfest" id="Ct4-db-dIR"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OWl-G3-uzd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1194" y="481"/>
+        </scene>
+        <!--View Controller - Churches-->
+        <scene sceneID="wq2-GU-ebV">
+            <objects>
+                <viewController id="geW-nR-1rs" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2W0-tb-1TU"/>
+                        <viewControllerLayoutGuide type="bottom" id="jfA-XR-hp9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3wq-1t-rye">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="munichChurches" translatesAutoresizingMaskIntoConstraints="NO" id="G6g-RV-idh">
+                                <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Churches" id="2eg-zn-Ndl"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8dQ-9Q-cSi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="796" y="100"/>
+        </scene>
+        <!--Navigation Controller - Munich-->
+        <scene sceneID="7ze-1k-S1n">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="e9F-0Y-a2K" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Munich" image="tabBarMunich" id="Khz-ph-A0H"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="mX8-yj-ssg">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="nEl-7y-e79" kind="relationship" relationship="rootViewController" id="8hr-eM-gaf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mMS-rw-qu9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-290" y="481"/>
+        </scene>
+        <!--View Controller - Orlando-->
+        <scene sceneID="Rl8-hU-qdH">
+            <objects>
+                <viewController id="9O3-Vy-qjP" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="iNT-ea-irG"/>
+                        <viewControllerLayoutGuide type="bottom" id="kmL-9P-rUL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fxQ-V2-ZFz">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="orlando" translatesAutoresizingMaskIntoConstraints="NO" id="lUL-Xq-jjA">
+                                <rect key="frame" x="0.0" y="20" width="320" height="499"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Orlando" image="tabBarOrlando" id="dyT-iJ-V2l"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TJG-hR-MaH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-290" y="1235"/>
+        </scene>
+        <!--View Controller - Paris-->
+        <scene sceneID="kkM-ZO-jw6">
+            <objects>
+                <viewController id="A1N-DX-sdd" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Aig-0o-zLC"/>
+                        <viewControllerLayoutGuide type="bottom" id="Diu-9z-t9S"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nag-eL-o8v">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="paris" translatesAutoresizingMaskIntoConstraints="NO" id="hEi-dL-E7k">
+                                <rect key="frame" x="0.0" y="20" width="320" height="499"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Paris" image="tabBarParis" id="upd-db-hz1"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1xD-qt-GBc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-290" y="1984"/>
+        </scene>
+        <!--View Controller - Rome-->
+        <scene sceneID="tuf-xT-zNV">
+            <objects>
+                <viewController id="Zad-Fv-sQS" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4Up-4v-0nN"/>
+                        <viewControllerLayoutGuide type="bottom" id="W5E-0g-C4T"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6bF-6W-GD7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rome" translatesAutoresizingMaskIntoConstraints="NO" id="exf-e5-z4I">
+                                <rect key="frame" x="0.0" y="20" width="320" height="499"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Rome" image="tabBarRome" id="vnI-mo-c1K"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bli-XL-tkj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-290" y="2768"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cancun" width="320" height="499"/>
+        <image name="londonBoatCruise" width="320" height="455"/>
+        <image name="londonMonuments" width="320" height="455"/>
+        <image name="londonMuseums" width="320" height="455"/>
+        <image name="miami" width="320" height="499"/>
+        <image name="munichChurches" width="320" height="455"/>
+        <image name="munichMarienplatz" width="320" height="455"/>
+        <image name="munichOktoberfest" width="320" height="455"/>
+        <image name="orlando" width="320" height="499"/>
+        <image name="paris" width="320" height="499"/>
+        <image name="rome" width="320" height="499"/>
+        <image name="tabBarCancun" width="24" height="24"/>
+        <image name="tabBarLondon" width="24" height="24"/>
+        <image name="tabBarMiami" width="24" height="24"/>
+        <image name="tabBarMunich" width="24" height="24"/>
+        <image name="tabBarOrlando" width="24" height="24"/>
+        <image name="tabBarParis" width="24" height="24"/>
+        <image name="tabBarRome" width="24" height="24"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="13A569" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <deployment defaultVersion="1552" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3ye-Dg-7IQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="pWf-tn-0Nh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="URL:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fAY-hR-4Cz">
+                                <rect key="frame" x="5" y="24" width="40" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="http://www.apple.com" borderStyle="roundedRect" placeholder="Enter URL" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="VG9-U2-7ic">
+                                <rect key="frame" x="50" y="21" width="264" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="URL" returnKeyType="go" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="3bd-q4-Hcc"/>
+                                </connections>
+                            </textField>
+                            <webView multipleTouchEnabled="YES" contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yF7-rh-ZPe">
+                                <rect key="frame" x="0.0" y="52" width="320" height="516"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="QH0-GY-XhZ"/>
+                                </connections>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="yF7-rh-ZPe" secondAttribute="trailing" id="cH8-7c-nMh"/>
+                            <constraint firstItem="VG9-U2-7ic" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="21" id="e69-l5-68D"/>
+                            <constraint firstItem="VG9-U2-7ic" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="50" id="gk1-lV-z5T"/>
+                            <constraint firstItem="yF7-rh-ZPe" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="52" id="iSx-6U-JnL"/>
+                            <constraint firstItem="yF7-rh-ZPe" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="miX-qZ-x60"/>
+                            <constraint firstAttribute="bottom" secondItem="yF7-rh-ZPe" secondAttribute="bottom" id="nBq-6s-h35"/>
+                            <constraint firstAttribute="trailing" secondItem="VG9-U2-7ic" secondAttribute="trailing" constant="6" id="uYD-3z-lkr"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="yF7-rh-ZPe" id="X5x-9X-98S"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

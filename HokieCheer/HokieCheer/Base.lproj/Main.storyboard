@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="13A584" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="8YX-ce-x5E">
+    <dependencies>
+        <deployment defaultVersion="1536" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Vex-rW-GRa">
+            <objects>
+                <tabBarController id="8YX-ce-x5E" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="JQR-rB-NYL">
+                        <rect key="frame" x="0.0" y="431" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="g5r-Fn-YaB" kind="relationship" relationship="viewControllers" id="qtv-Lo-xFe"/>
+                        <segue destination="0ai-1Q-gAA" kind="relationship" relationship="viewControllers" id="h0z-0Q-54C"/>
+                        <segue destination="0VA-FS-RSg" kind="relationship" relationship="viewControllers" id="woQ-8j-lXm"/>
+                        <segue destination="XEr-7g-lea" kind="relationship" relationship="viewControllers" id="UDZ-cW-P9q"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FNP-y4-bzi" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="180"/>
+        </scene>
+        <!--Hokie Pokie View Controller - Hokie Pokie-->
+        <scene sceneID="efD-o7-DHW">
+            <objects>
+                <viewController id="XEr-7g-lea" customClass="HokiePokieViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cHx-zQ-56y"/>
+                        <viewControllerLayoutGuide type="bottom" id="TXL-Fw-I5h"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2zg-oF-w5S">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sf8-Yi-axN">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Nku-K8-evg"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem width="61" style="plain" systemItem="fixedSpace" id="Gtt-hX-Nc9"/>
+                                    <barButtonItem title="Item" systemItem="play" id="sgv-PL-xAa">
+                                        <connections>
+                                            <action selector="playAudio:" destination="XEr-7g-lea" id="qWz-xt-0rr"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="QY8-ML-Xv8"/>
+                                    <barButtonItem systemItem="pause" id="9z8-2z-AlK">
+                                        <connections>
+                                            <action selector="pauseAudio:" destination="XEr-7g-lea" id="uBh-mA-iUr"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="Uvf-8X-lWG"/>
+                                    <barButtonItem systemItem="stop" id="UJJ-ek-Oua">
+                                        <connections>
+                                            <action selector="stopAudio:" destination="XEr-7g-lea" id="lCG-wy-s0f"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hokiePokie" translatesAutoresizingMaskIntoConstraints="NO" id="FjS-NT-Bdj">
+                                <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="FjS-NT-Bdj" firstAttribute="top" secondItem="sf8-Yi-axN" secondAttribute="bottom" id="BS6-bd-8hZ"/>
+                            <constraint firstItem="FjS-NT-Bdj" firstAttribute="leading" secondItem="2zg-oF-w5S" secondAttribute="leading" id="CDg-ko-kNA"/>
+                            <constraint firstAttribute="trailing" secondItem="FjS-NT-Bdj" secondAttribute="trailing" id="F7n-nd-AZb"/>
+                            <constraint firstItem="FjS-NT-Bdj" firstAttribute="top" secondItem="sf8-Yi-axN" secondAttribute="bottom" id="Jxf-Qr-wpE"/>
+                            <constraint firstItem="sf8-Yi-axN" firstAttribute="leading" secondItem="2zg-oF-w5S" secondAttribute="leading" id="WFd-Ro-S7b"/>
+                            <constraint firstItem="TXL-Fw-I5h" firstAttribute="top" secondItem="FjS-NT-Bdj" secondAttribute="bottom" id="X2m-VP-SXC"/>
+                            <constraint firstItem="sf8-Yi-axN" firstAttribute="top" secondItem="cHx-zQ-56y" secondAttribute="bottom" id="hvR-hY-E2J"/>
+                            <constraint firstAttribute="trailing" secondItem="sf8-Yi-axN" secondAttribute="trailing" id="uJT-eQ-S7O"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Hokie Pokie" image="tabHokiePokie" id="mNL-PD-QOa"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w2d-yW-cr0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="679" y="853"/>
+        </scene>
+        <!--Key Play View Controller - Key Play-->
+        <scene sceneID="c3A-B2-PQN">
+            <objects>
+                <viewController id="0ai-1Q-gAA" customClass="KeyPlayViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9hH-1r-XjE"/>
+                        <viewControllerLayoutGuide type="bottom" id="73w-3d-LtV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hpl-8r-Qsa">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="huT-7n-ndQ">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="oJj-rN-2II"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem width="61" style="plain" systemItem="fixedSpace" id="X1H-Od-nbu"/>
+                                    <barButtonItem title="Item" systemItem="play" id="Guf-Ex-mX4">
+                                        <connections>
+                                            <action selector="playAudio:" destination="0ai-1Q-gAA" id="btJ-Ts-FaU"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="LEN-dO-pfz"/>
+                                    <barButtonItem systemItem="pause" id="h19-yA-stX">
+                                        <connections>
+                                            <action selector="pauseAudio:" destination="0ai-1Q-gAA" id="Zec-4L-4D4"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="dId-Tr-viq"/>
+                                    <barButtonItem systemItem="stop" id="egs-tO-T9t">
+                                        <connections>
+                                            <action selector="stopAudio:" destination="0ai-1Q-gAA" id="xaK-dg-cuT"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="keyPlay" translatesAutoresizingMaskIntoConstraints="NO" id="JiT-hM-cyl">
+                                <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="73w-3d-LtV" firstAttribute="top" secondItem="JiT-hM-cyl" secondAttribute="bottom" id="AfB-oF-GWo"/>
+                            <constraint firstAttribute="trailing" secondItem="huT-7n-ndQ" secondAttribute="trailing" id="GwK-1p-WoG"/>
+                            <constraint firstAttribute="trailing" secondItem="JiT-hM-cyl" secondAttribute="trailing" id="NgR-jF-GzM"/>
+                            <constraint firstItem="JiT-hM-cyl" firstAttribute="top" secondItem="huT-7n-ndQ" secondAttribute="bottom" id="P0w-Qr-XFQ"/>
+                            <constraint firstItem="huT-7n-ndQ" firstAttribute="top" secondItem="9hH-1r-XjE" secondAttribute="bottom" id="Tz5-NK-L0u"/>
+                            <constraint firstItem="huT-7n-ndQ" firstAttribute="leading" secondItem="hpl-8r-Qsa" secondAttribute="leading" id="Zxd-E6-Bix"/>
+                            <constraint firstItem="JiT-hM-cyl" firstAttribute="top" secondItem="huT-7n-ndQ" secondAttribute="bottom" id="lSx-k4-bxP"/>
+                            <constraint firstItem="JiT-hM-cyl" firstAttribute="leading" secondItem="hpl-8r-Qsa" secondAttribute="leading" id="seu-Wh-9qm"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Key Play" image="tabKeyPlay" id="gUz-2G-XvU"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HDQ-yW-iwS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1045" y="-402"/>
+        </scene>
+        <!--Turkey Gobble View Controller - Turkey Gobble-->
+        <scene sceneID="ZdR-ce-Jg9">
+            <objects>
+                <viewController id="g5r-Fn-YaB" customClass="TurkeyGobbleViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Juh-jL-Ctf"/>
+                        <viewControllerLayoutGuide type="bottom" id="mUW-9t-60I"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JcV-uW-ZqJ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hokieBird" translatesAutoresizingMaskIntoConstraints="NO" id="3SI-sS-IkH">
+                                <rect key="frame" x="0.0" y="20" width="320" height="499"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shake Me To Cheer for Hokies!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="116" translatesAutoresizingMaskIntoConstraints="NO" id="rSF-F3-U2k">
+                                <rect key="frame" x="184" y="370" width="116" height="83"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="116" id="cU4-uV-pmM"/>
+                                    <constraint firstAttribute="height" constant="83" id="tDr-o9-zun"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rSF-F3-U2k" firstAttribute="leading" secondItem="JcV-uW-ZqJ" secondAttribute="leading" constant="184" id="4tS-ov-3tv"/>
+                            <constraint firstItem="3SI-sS-IkH" firstAttribute="leading" secondItem="JcV-uW-ZqJ" secondAttribute="leading" id="68F-Yx-ubC"/>
+                            <constraint firstItem="3SI-sS-IkH" firstAttribute="top" secondItem="JcV-uW-ZqJ" secondAttribute="top" constant="20" id="Cgh-J9-kfI"/>
+                            <constraint firstAttribute="bottom" secondItem="3SI-sS-IkH" secondAttribute="bottom" constant="49" id="ajK-UA-z0o"/>
+                            <constraint firstAttribute="trailing" secondItem="3SI-sS-IkH" secondAttribute="trailing" id="kg2-b8-GpW"/>
+                            <constraint firstAttribute="trailing" secondItem="rSF-F3-U2k" secondAttribute="trailing" constant="20" id="pC3-f4-iPT"/>
+                            <constraint firstItem="3SI-sS-IkH" firstAttribute="bottom" secondItem="rSF-F3-U2k" secondAttribute="bottom" constant="66" id="qGz-Hy-KLh"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Turkey Gobble" image="tabTurkeyGobble" id="knL-wx-vNO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kt9-Qc-vEb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="679" y="-726"/>
+        </scene>
+        <!--Tech Triumph View Controller - Tech Triumph-->
+        <scene sceneID="U7E-3Q-q9w">
+            <objects>
+                <viewController id="0VA-FS-RSg" customClass="TechTriumphViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="u1y-s3-spF"/>
+                        <viewControllerLayoutGuide type="bottom" id="y1b-f7-Ftv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Q8W-Ov-hpz">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a3L-PU-pDr">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="RYg-Ye-A9C"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem width="61" style="plain" systemItem="fixedSpace" id="oLp-Do-tEe"/>
+                                    <barButtonItem title="Item" systemItem="play" id="WBg-Ro-ywi">
+                                        <connections>
+                                            <action selector="playAudio:" destination="0VA-FS-RSg" id="izZ-7o-MWm"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="2np-MQ-OUP"/>
+                                    <barButtonItem systemItem="pause" id="jK0-3a-HQW">
+                                        <connections>
+                                            <action selector="pauseAudio:" destination="0VA-FS-RSg" id="dKq-nq-jPd"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="7cb-ag-u77"/>
+                                    <barButtonItem systemItem="stop" id="lGe-KQ-UAe">
+                                        <connections>
+                                            <action selector="stopAudio:" destination="0VA-FS-RSg" id="8hs-Zv-F2G"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="techTriump" translatesAutoresizingMaskIntoConstraints="NO" id="8r2-qz-pVc">
+                                <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="a3L-PU-pDr" firstAttribute="leading" secondItem="Q8W-Ov-hpz" secondAttribute="leading" id="Tt2-DB-Bux"/>
+                            <constraint firstItem="8r2-qz-pVc" firstAttribute="top" secondItem="a3L-PU-pDr" secondAttribute="bottom" id="Wab-QB-a83"/>
+                            <constraint firstItem="a3L-PU-pDr" firstAttribute="top" secondItem="u1y-s3-spF" secondAttribute="bottom" id="YIx-mm-PUX"/>
+                            <constraint firstItem="y1b-f7-Ftv" firstAttribute="top" secondItem="8r2-qz-pVc" secondAttribute="bottom" id="ZhY-No-fe7"/>
+                            <constraint firstItem="8r2-qz-pVc" firstAttribute="leading" secondItem="Q8W-Ov-hpz" secondAttribute="leading" id="biX-oc-Uxf"/>
+                            <constraint firstAttribute="trailing" secondItem="a3L-PU-pDr" secondAttribute="trailing" id="ivk-c8-f4f"/>
+                            <constraint firstItem="8r2-qz-pVc" firstAttribute="top" secondItem="a3L-PU-pDr" secondAttribute="bottom" id="rPN-4p-ZBD"/>
+                            <constraint firstAttribute="trailing" secondItem="8r2-qz-pVc" secondAttribute="trailing" id="vEK-Oj-RzJ"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Tech Triumph" image="tabTechTriumph" id="3UI-qs-SZT"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tsJ-J0-rCa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1045" y="366"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="hokieBird" width="320" height="499"/>
+        <image name="hokiePokie" width="320" height="455"/>
+        <image name="keyPlay" width="320" height="455"/>
+        <image name="tabHokiePokie" width="30" height="30"/>
+        <image name="tabKeyPlay" width="30" height="30"/>
+        <image name="tabTechTriumph" width="30" height="30"/>
+        <image name="tabTurkeyGobble" width="30" height="30"/>
+        <image name="techTriump" width="320" height="455"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

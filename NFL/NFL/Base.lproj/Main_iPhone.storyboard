@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="13A598" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="rfK-oX-H9R">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+    </dependencies>
+    <scenes>
+        <!--Table View Controller - NFL-->
+        <scene sceneID="emL-W6-7ki">
+            <objects>
+                <tableViewController id="UfC-sq-pai" customClass="NFLTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="lqB-ss-km4">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="detailButton" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TeamCellType" rowHeight="60" id="h96-uu-FvR" customClass="TeamCell">
+                                <rect key="frame" x="0.0" y="86" width="320" height="60"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="h96-uu-FvR" id="8f5-qV-Gd7">
+                                    <rect key="frame" x="0.0" y="0.0" width="273" height="59"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="49ers" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9SD-hO-vVe">
+                                            <rect key="frame" x="20" y="18" width="74" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="49ers" translatesAutoresizingMaskIntoConstraints="NO" id="TL6-9K-4hn">
+                                            <rect key="frame" x="102" y="13" width="34" height="34"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="San Francisco 49ers" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H0o-nq-XS4">
+                                            <rect key="frame" x="144" y="-1" width="115" height="24"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="NFC West" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8lx-m2-OnC">
+                                            <rect key="frame" x="144" y="19" width="75" height="19"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Candlestick Park" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6v7-zd-9yK">
+                                            <rect key="frame" x="144" y="37" width="115" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="divisionLabel" destination="8lx-m2-OnC" id="bbS-TH-D1F"/>
+                                    <outlet property="stadiumLabel" destination="6v7-zd-9yK" id="8qi-k5-jC4"/>
+                                    <outlet property="teamCodeLabel" destination="9SD-hO-vVe" id="AIN-iV-y18"/>
+                                    <outlet property="teamLogo" destination="TL6-9K-4hn" id="f22-In-3fk"/>
+                                    <outlet property="teamNameLabel" destination="H0o-nq-XS4" id="Bo3-wN-Glc"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="NFL" id="8Vt-K8-Dvk"/>
+                    <connections>
+                        <segue destination="8uA-rz-20r" kind="push" identifier="NFLWebView" id="mt3-7I-Fkc"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rYy-es-G3e" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="569" y="92"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="8Es-tZ-0Mo">
+            <objects>
+                <viewController id="8uA-rz-20r" customClass="NFLWebViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SGi-1G-CkG"/>
+                        <viewControllerLayoutGuide type="bottom" id="Yva-pt-ql2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ldD-h2-PV9">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView multipleTouchEnabled="YES" contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bO5-zh-GmR">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bO5-zh-GmR" firstAttribute="leading" secondItem="ldD-h2-PV9" secondAttribute="leading" id="68K-xQ-Tin"/>
+                            <constraint firstItem="bO5-zh-GmR" firstAttribute="top" secondItem="ldD-h2-PV9" secondAttribute="top" id="BmS-y6-jeQ"/>
+                            <constraint firstAttribute="bottom" secondItem="bO5-zh-GmR" secondAttribute="bottom" id="S8D-gT-ysU"/>
+                            <constraint firstAttribute="trailing" secondItem="bO5-zh-GmR" secondAttribute="trailing" id="uke-83-rwB"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="7n2-jH-rIm"/>
+                    <connections>
+                        <outlet property="webView" destination="bO5-zh-GmR" id="e8J-ep-lDi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2w5-3h-Beu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="989" y="-158"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="eMM-Jh-yhQ">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="rfK-oX-H9R" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rlX-Oc-AfZ">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="UfC-sq-pai" kind="relationship" relationship="rootViewController" id="m1t-6L-5R8"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Eel-R2-Elf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="35" y="92"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="49ers" width="32" height="32"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
